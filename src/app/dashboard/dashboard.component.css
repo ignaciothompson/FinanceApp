@@ -1,0 +1,30 @@
+.dashboard-content .main-row{
+    height: calc(100vh - 445px);
+}
+
+.dashboard-content .transactions-card{
+    height: calc(65% - 0.25rem);
+}
+
+.dashboard-content .quickTransactions-card{
+    height: calc(35% - 0.25rem);
+}
+
+.dashboard-content .charts-card{
+    height: calc(50% - 0.25rem);
+}
+
+.dashboard-content .sm-charts-card{
+    height: 100%;
+    width: calc(50% - 0.5rem);
+}
+
+.dashboard-content .charts-card .chart-container,
+.dashboard-content .sm-charts-card .chart-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
