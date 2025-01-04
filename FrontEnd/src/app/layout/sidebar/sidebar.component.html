@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <div class="main-item">
+            <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+          </div>
+        </li>
+        <!-- Accounts Menu -->
+        <li class="nav-item">
+          <div class="main-item">
+            <button id="accounts" (click)="toggleDropdown('accounts')" class="nav-link btn" data-bs-toggle="collapse" data-bs-target="#accountsSubmenu" aria-expanded="false" aria-controls="accountsSubmenu">
+              Cuentas <i class="fa fa-chevron-down" [style.transform]="toggled['accounts'] ? 'rotate(180deg)' : 'rotate(0deg)'"></i>
+            </button>
+          </div>
+          <div class="collapse" id="accountsSubmenu">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" routerLink="/accounts" routerLinkActive="active">Cuentas</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/accounts/1" routerLinkActive="active">Detalle Cuentas</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/transactions/new" routerLinkActive="active">Ingreso Transacciones</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/transactions" routerLinkActive="active">Listado Transacciones</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Investments Menu -->
+        <li class="nav-item">
+          <div class="main-item">
+            <button (click)="toggleDropdown('investments')" class="nav-link btn" data-bs-toggle="collapse" data-bs-target="#investmentsSubmenu" aria-expanded="false" aria-controls="investmentsSubmenu">
+              Inversiones <i class="fa fa-chevron-down" [style.transform]="toggled['investments'] ? 'rotate(180deg)' : 'rotate(0deg)'"></i>
+            </button>
+          </div>
+          <div class="collapse" id="investmentsSubmenu">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" routerLink="/investments" routerLinkActive="active">Inversiones</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/investments/1" routerLinkActive="active">Detalle Inversiones</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/investments/new" routerLinkActive="active">Ingreso Inversiones</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Projects Menu -->
+        <li class="nav-item">
+          <div class="main-item">
+            <button (click)="toggleDropdown('projects')" class="nav-link btn" data-bs-toggle="collapse" data-bs-target="#projectsSubmenu" aria-expanded="false" aria-controls="projectsSubmenu">
+              Proyectos <i class="fa fa-chevron-down" [style.transform]="toggled['projects'] ? 'rotate(180deg)' : 'rotate(0deg)'"></i>
+            </button>
+          </div>
+          <div class="collapse" id="projectsSubmenu">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/projects/1" routerLinkActive="active">Detalle Proyectos</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/projects/new" routerLinkActive="active">Ingreso Proyectos</a></li>
+            </ul>
+          </div>
+        </li>
+
+        <!-- Simulator Menu -->
+        <li class="nav-item">
+          <div class="main-item">
+            <a class="nav-link" routerLink="/simulator" routerLinkActive="active">Simulator</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
