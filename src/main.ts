@@ -1,6 +1,24 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+
 import { AppComponent } from './app/app.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+import { AppRoutingModule } from './app/app.routes';
+
+import { importProvidersFrom } from '@angular/core';
+
+import { FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+
+
+
+bootstrapApplication(AppComponent, {
+
+  providers: [
+
+    importProvidersFrom(AppRoutingModule, FormsModule, HttpClientModule, CommonModule)
+
+  ]
+
+}).catch(err => console.error(err));

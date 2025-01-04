@@ -1,1 +1,9 @@
-<p>accounts-list works!</p>
+<!DOCTYPE html>
+<ul>
+    <li *ngFor="let account of accounts">
+        <div>Id: {{ account.id }}</div>
+        <div>Name: {{ account.name }}</div>
+        <div>Simbol: {{ account.simbol }}</div>
+        <div>Balance: {{ account.balance }}</div>
+    </li>
+</ul>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -21,14 +21,17 @@ import { ProjectDetailComponent } from './projects/project-detail/project-detail
 import { ProjectItemFormComponent } from './projects/project-item-form/project-item-form.component';
 import { SimulatorFormComponent } from './simulator/simulator-form/simulator-form.component';
 import { SimulatorResultComponent } from './simulator/simulator-result/simulator-result.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
+  declarations: [],
   imports: [
-    AppComponent,
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    AppComponent,
     SidebarComponent,
     TopNavbarComponent,
     MainContainerComponent,
@@ -44,6 +47,7 @@ import { SimulatorResultComponent } from './simulator/simulator-result/simulator
     ProjectItemFormComponent,
     SimulatorFormComponent,
     SimulatorResultComponent,
+    DashboardComponent,
   ],
   providers: [],
 })
