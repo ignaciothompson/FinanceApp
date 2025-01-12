@@ -1,0 +1,24 @@
+.card.account,
+.card.account .card-header {
+  background-color: var(--bg-color);
+  transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.3s;
+}
+
+.card.account:hover,
+.card.account:active,
+.card.account:hover .card-header,
+.card.account:active .card-header {
+  background-color: var(--bg-dark-color);
+  color: white;
+}
+
+.account-arrow {
+  font-size: 32px;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.card.account:hover .account-arrow {
+  opacity: 1;
+  transform: rotate(-45deg);
+}
